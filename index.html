@@ -15,13 +15,13 @@
             <nav class="nav">
                 <h1 class="nav__logo">WA.</h1>
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link menu__link--active">Home</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Resume</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Services </a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+                    <li data-item="home" class="menu__item menu__item--active"><a href="#" class="menu__link ">Home</a></li>
+                    <li data-item="about-us" class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                    <li data-item="services" class="menu__item"><a href="#" class="menu__link">Services </a></li>
+                    <li data-item="resume" class="menu__item"><a href="#" class="menu__link">Resume</a></li>
+                    <li data-item="portfolio" class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+                    <li data-item="pricing" class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+                    <li data-item="contect-us" class="menu__item"><a href="#" class="menu__link">Contact</a></li>
                 </ul>
                 <div class="nav__icon-mobile">
                     <div class="nav__icon-line"></div>
@@ -39,11 +39,15 @@
         </div>
     </header>
     <div class="cover"></div>
-
-
     <main class="main">
         <section class="home">
             <div class="container">
+                <div class="btn-theme">
+                    <svg  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                                       
+                </div>
                 <div class="row align-center flex-dir-col-reverse-m-md">
                     <div class="col-12 col-md-6 col-xl-7">
                         <div class="home__content">
@@ -62,7 +66,7 @@
                 </div>
             </div>
             <svg class="wave" viewBox="0 0 2165.237 361.824">
-                <path id="Shape" d="M-27.061,842.561s136.212,230.682,399.849,188.94,252.483-137.226,544.85-30.757,358.107,28.729,547.046-37.349,358.107,118.637,576.45,8.788,0,232.2,0,232.2L36.82,1201.005Z" transform="translate(27.061 -842.561)" fill="#0cbfae"/>
+                <path id="Shape" d="M-27.061,842.561s136.212,230.682,399.849,188.94,252.483-137.226,544.85-30.757,358.107,28.729,547.046-37.349,358.107,118.637,576.45,8.788,0,232.2,0,232.2L36.82,1201.005Z" transform="translate(27.061 -842.561)" />
               </svg>
         </section>
         <section class="about-us">
@@ -212,7 +216,7 @@
                     <p class="under-title ">My formal Bio Details</p>
                 </div>
                 <div class="resume__all-content">
-                    <div class="resume-menu">
+                    <div class="resume-menu resume-menu--dark">
                         <ul class="resume-menu__list">
                             <li class="resume-menu__item resume-menu__item--show" data-content-id="#education"><svg width="22" height="21.999" viewBox="0 0 22 21.999">
                                 <path id="Icon_awesome-user-graduate" data-name="Icon awesome-user-graduate" d="M463.357,3794a2.225,2.225,0,0,1-2.357-2.062v-.412c0-3.1,2.8-5.615,6.315-5.748l4.685,4.1,4.686-4.1c3.511.133,6.315,2.646,6.315,5.748v.412a2.225,2.225,0,0,1-2.358,2.062Zm2.358-15.124a4.918,4.918,0,0,1,.687-2.449l-3.241-.683V3778a.935.935,0,0,1,.045,1.718l.766,2.677a.45.45,0,0,1-.373.6h-2.053a.451.451,0,0,1-.373-.6l.766-2.677a.934.934,0,0,1,.044-1.718v-2.51l-.314-.064c-.888-.189-.888-1.169,0-1.358l9.36-1.973a4.839,4.839,0,0,1,1.95,0l9.349,1.977c.894.189.894,1.165,0,1.354l-4.728,1a4.87,4.87,0,0,1,.687,2.449c0,3.038-2.814,5.5-6.286,5.5S465.714,3781.912,465.714,3778.875Z" transform="translate(-461 -3772)" fill="#fff"/>
@@ -236,7 +240,7 @@
                               <span class="resume-menu__head">SEO Skills</span></li>
                         </ul>
                     </div>
-                    <div class="resume-article ">
+                    <article class="resume-article resume-article--dark">
                         <div class="wrapper-article-parts wrapper-article-parts--show" id="education">
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
@@ -263,46 +267,35 @@
                         <div class="wrapper-article-parts" id="work-history">
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
+                                    <h4 class="resume-article__title">Freelancer</h4><div class="resume-article__date">2015-2024</div>
                                 </div>
-                                <p class="resume-article__sub-title">B.s Computer Engineer</p>
                                 <p class="resume-article__paragraph">out Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
+                                    <h4 class="resume-article__title">Employee</h4><div class="resume-article__date">2023-2024</div>
                                 </div>
                                 <p class="resume-article__sub-title">B.sc in Cineer</p>
                                 <p class="resume-article__paragraph">Reference Lorem ipsum dolor sit amet consectetur adipisicing elit.d site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
-                            </div>
-                            <div class="resume-article__part">
-                                <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
-                                </div>
-                                <p class="resume-article__sub-title">B.sc in Computer Engineer</p>
-                                <p class="resume-article__paragraph">Rgiving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                         </div>
                         <div class="wrapper-article-parts" id="programming-skill">
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
+                                    <h4 class="resume-article__title">javascript</h4><div class="resume-article__date">mid-level</div>
                                 </div>
-                                <p class="resume-article__sub-title">B.sc in Computer Engineer</p>
-                                <p class="resume-article__paragraph">Lorem, ipsum.Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                                <p class="resume-article__paragraph">Lorem, ipsum.Reut Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
+                                    <h4 class="resume-article__title">Php</h4><div class="resume-article__date">junior</div>
                                 </div>
-                                <p class="resume-article__sub-title">B.sc in Computer Engineer</p>
                                 <p class="resume-article__paragraph">Reference Lorem ipsum dolor sit amet consectetur adipisicing elit.d site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                             <div class="resume-article__part">
                                 <div class="wrapper-article-title">
-                                    <h4 class="resume-article__title">Envato University</h4><div class="resume-article__date">2020-2024</div>
+                                    <h4 class="resume-article__title">Html</h4><div class="resume-article__date">senior</div>
                                 </div>
-                                <p class="resume-article__sub-title">B.sc in Computer Engineer</p>
                                 <p class="resume-article__paragraph">Rgiving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                         </div>
@@ -352,7 +345,7 @@
                                 <p class="resume-article__paragraph">Rgiving information on its origins, as well as a random Lipsum generator.</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -365,11 +358,11 @@
                 <ul class="portfolio-options">
                     <li class="portfolio-option__item portfolio-option__item--active" slider-content-id="#all-work">All Work</li>
                     <li class="portfolio-option__item" slider-content-id="#illustration">Illustration</li>
-                    <li class="portfolio-option__item">Animation</li>
-                    <li class="portfolio-option__item">App UI</li>
-                    <li class="portfolio-option__item">Web UI</li>
+                    <li class="portfolio-option__item" slider-content-id="#animation" >Animation</li>
+                    <li class="portfolio-option__item"  slider-content-id="#app">App UI</li>
+                    <li class="portfolio-option__item" slider-content-id="#web">Web UI</li>
                     <li class="portfolio-option__item" slider-content-id="#socia-media">Social Media</li>
-                    <li class="portfolio-option__item">Print Design</li>
+                    <li class="portfolio-option__item" slider-content-id="#print">Print Design</li>
                 </ul>
                 <div class="portfolio__slider portfolio__slider--show" id="all-work">
                     <div class="swiper">
@@ -388,7 +381,7 @@
                     <h4 class="portfolio-title">Lorem ipsum dolor sit amet.</h4>
                     <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptates delectus nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nihil enim quisquam.</p>
                 </div>
-                <div class="portfolio__slider" id="">
+                <div class="portfolio__slider" id="animation">
                     <div class="swiper">
                         <div class="swiper-wrapper" >
                             <div class="swiper-slide  ">
@@ -415,7 +408,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="portfolio__slider" id="">
+                <div class="portfolio__slider" id="app">
                     <div class="swiper">
                         <div class="swiper-wrapper" >
                             <div class="swiper-slide  ">
@@ -442,7 +435,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="portfolio__slider" id="">
+                <div class="portfolio__slider" id="web">
                     <div class="swiper">
                         <div class="swiper-wrapper" >
                             <div class="swiper-slide  ">
@@ -496,7 +489,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="portfolio__slider" id="">
+                <div class="portfolio__slider" id="print">
                     <div class="swiper">
                         <div class="swiper-wrapper" >
                             <div class="swiper-slide  ">
@@ -543,22 +536,22 @@
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Graphic Desing</span>
+                                    <span class="pricing-advantages__advantage">Graphic Desing</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Web Design</span>
+                                    <span class="pricing-advantages__advantage">Web Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">UI/UX Design</span>
+                                    <span class="pricing-advantages__advantage">UI/UX Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">HTML & CSS</span>
+                                    <span class="pricing-advantages__advantage">HTML & CSS</span>
                                 </li>
                             </ul>
                             <a href="#" class="btn pricing__btn--basic">
@@ -577,27 +570,27 @@
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Graphic Desing</span>
+                                    <span class="pricing-advantages__advantage">Graphic Desing</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Web Design</span>
+                                    <span class="pricing-advantages__advantage">Web Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">UI/UX Design</span>
+                                    <span class="pricing-advantages__advantage">UI/UX Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">HTML & CSS</span>
+                                    <span class="pricing-advantages__advantage">HTML & CSS</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">SEO Optimize</span>
+                                    <span class="pricing-advantages__advantage">SEO Optimize</span>
                                 </li>
                             </ul>
                             <a href="#" class="btn pricing__btn--standard">
@@ -616,32 +609,32 @@
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Graphic Desing</span>
+                                    <span class="pricing-advantages__advantage">Graphic Desing</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Web Design</span>
+                                    <span class="pricing-advantages__advantage">Web Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">UI/UX Design</span>
+                                    <span class="pricing-advantages__advantage">UI/UX Design</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">HTML & CSS</span>
+                                    <span class="pricing-advantages__advantage">HTML & CSS</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">SEO Optimize</span>
+                                    <span class="pricing-advantages__advantage">SEO Optimize</span>
                                 </li>
                                 <li class="pricing-advantages__item"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                     <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
                                     </svg>
-                                    <span class="procing-advantages__advantage">Business Develop</span>
+                                    <span class="pricing-advantages__advantage">Business Develop</span>
                                 </li>
                             </ul>
                             <a href="#" class="btn pricing__btn--premium">
@@ -712,16 +705,11 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript">
         const swiper = new Swiper('.swiper',{
-            spaceBetween: 35,
+            spaceBetween: 30,
             breakpoints:{
                 768:{
                     slidesPerView: 2,

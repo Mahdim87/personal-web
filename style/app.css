@@ -14,8 +14,34 @@
   --main-color: #0abead;
   --bg-section-color: #ffffff;
   --shadow-box-section: rgba(10, 182, 255, 0.24);
+  --fill-wave:#0abead;
+}
+:root.dark-theme{
+  --text-color: #95A5C6;
+  --bg-color: #161D26;
+  --shadow-color: rgba(19, 182, 255, 0);
+  --main-color: #0abead;
+  --bg-section-color: #1F2935;
+  --shadow-box-section: rgba(10, 181, 255, 0);
+  --fill-wave:#1F2935;
+
 }
 
+
+.btn-theme{
+  width: 5rem;
+  height: 5rem;
+  /* background-color: var(--bg-color); */
+  /* box-shadow: 0 0 5rem 5rem var(--shadow-color); */
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
 /* reset CSS */
 
 a {
@@ -36,8 +62,8 @@ body {
   font-family: var(--poppins-regular);
   font-size: 1.6rem;
   line-height: 1.5;
+  background-color: var(--bg-color);
   color: var(--text-color);
-  scroll-behavior: auto;
 }
 
 /* helper */
@@ -117,7 +143,7 @@ body {
 }
 
 .reset-skew {
-  transform: skewY(5deg);
+  transform:translateZ(0) skewY(5deg);
 }
 
 /* 
@@ -156,9 +182,18 @@ todo-------header & nav-----------
   font-size: 1.5rem;
 }
 
+.menu__item{
+  transition: all .2s;
+}
+
+.menu__item--active {
+  color: var(--main-color);
+}
+
 .menu__link {
   font-family: var(--poppins-medium);
   position: relative;
+  color: inherit;
 }
 .menu__link::before,
 .menu__link::after {
@@ -192,9 +227,7 @@ todo-------header & nav-----------
   transform: scaleX(1);
 }
 
-.menu__link--active {
-  color: var(--main-color);
-}
+
 
 /* 
 
@@ -329,7 +362,7 @@ todo-------home-----------
 */
 .home {
   /* margin-top: 20rem; */
-  padding: 10rem 0 20rem 0;
+  padding: 8rem 0 20rem 0;
   position: relative;
   overflow-x: hidden;
 }
@@ -365,8 +398,8 @@ todo-------home-----------
   width: 44rem;
   height: 44rem;
   background-position: center;
-  border: 2.5rem solid #fff;
-  box-shadow: 0 0 5rem #60eaff52;
+  border: 2.5rem solid var(--bg-section-color);
+  box-shadow: 0 0 5rem var(--shadow-color);
 }
 
 .wave {
@@ -374,6 +407,7 @@ todo-------home-----------
   bottom: 0;
   left: -6rem;
   right: -8rem;
+  fill: var(--fill-wave);
 }
 
 /* 
@@ -385,12 +419,16 @@ todo-------about us -- section-----------
   padding-top: 15rem;
 }
 
-.about-us .about-us__row {
-  box-shadow: 0 0 2rem #60eaff4b;
-}
+
+
+
 
 .about-us__row {
   display: flex;
+  background-color: var(--bg-section-color);
+  box-shadow: 0 0 2rem var(--shadow-color);
+
+
 }
 
 /* top section */
@@ -546,8 +584,8 @@ todo-------resume-- section-----------
 .resume,
 .pricing {
   background: var(--bg-section-color);
-  margin-bottom: 4rem;
-  transform: skewY(-5deg);
+  /* margin-bottom: 1rem; */
+  transform:translateZ(0) skewY(-5deg);
   box-shadow: 0 0 8rem var(--shadow-box-section);
   margin-top: 15rem;
   padding: 8rem 0;
@@ -559,7 +597,7 @@ todo-------resume-- section-----------
 }
 
 .resume-menu {
-  box-shadow: 0 0 5rem rgba(96, 233, 255, 0.27);
+  box-shadow: 0 0 6rem .5rem var(--shadow-color);
   position: relative;
   padding: 4rem 4rem 4rem 1rem;
   min-height: 100%;
@@ -576,6 +614,19 @@ todo-------resume-- section-----------
   bottom: 0;
   left: 0;
   width: 4rem;
+}
+
+:root.dark-theme .resume-menu--dark::after,
+:root.dark-theme .resume-article--dark::after{
+  content: "";
+  background: #fff;
+  display: block;
+  position: absolute;
+  /* top: 0; */
+  bottom: -2.5rem;
+  left: 0;
+  right: 0;
+  height: .6rem;
 }
 
 .resume-menu__list {
@@ -613,6 +664,7 @@ todo-------resume-- section-----------
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   transition: all 0.2s;
+  box-shadow: 0 0 5rem rgba(96, 233, 255, .27);
 }
 
 .resume-menu__item--show::before {
@@ -633,6 +685,7 @@ todo-------resume-- section-----------
   position: relative;
   padding-left: 2.2rem;
   min-height: 40rem;
+  position: relative;
 }
 
 .resume-article::before {
@@ -691,7 +744,9 @@ todo-------resume-- section-----------
   font-family: var(--poppins-semibold);
   font-size: 2rem;
 }
-
+:root.dark-theme .resume-article__title{
+  color: #F57F17;
+}
 .resume-article__date {
   background-color: #f57f17;
   padding: 0.5rem 1.5rem;
@@ -808,7 +863,7 @@ todo-------Pricing-- section-----------
 .pricing__get-premium {
   /* padding:0 8rem; */
   height: 100%;
-  box-shadow: 0 0 5rem rgba(96, 233, 255, 0.27);
+  box-shadow: 0 0 5rem var(--shadow-box-section);
   background-color: var(--bg-color);
 }
 
@@ -850,7 +905,7 @@ todo-------Pricing-- section-----------
   margin: 0 auto;
 }
 
-.procing-advantages__advantage {
+.pricing-advantages__advantage {
   padding-left: 1rem;
 }
 
@@ -920,7 +975,9 @@ todo-------contact us-- section-----------
   margin-bottom: 2rem;
   border-radius: 1rem;
 }
-
+:root.dark-theme .form__inp{
+  color: #f57f17;
+}
 .form__inp--message {
   resize: vertical;
   /* height: 18rem; */
